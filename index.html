@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script type="module" src="/app.js"></script>
+</head>
+<body id="app">
+    <section class="h-screen flex flex-col">
+        <!-- header -->
+        <div class="flex justify-between py-6 px-14 ">
+            <div class="">
+                <h3 class="text-2xl font-medium">Juan Perez</h3>
+                <h5 class="text-lg font-light text-gray-400">Ecribeme plisss</h5>
+            </div>
+            <div class="flex space-x-4">
+                <span class="headerItem">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-800 stroke-current h-8 w-8"  viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                    </svg>
+                </span>
+                <span class="headerItem">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-800 stroke-current h-8 w-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                </span>
+                <span class="headerItem">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-800 stroke-current h-8 w-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="14" cy="6" r="2" />
+                        <line x1="4" y1="6" x2="12" y2="6" />
+                        <line x1="16" y1="6" x2="20" y2="6" />
+                        <circle cx="8" cy="12" r="2" />
+                        <line x1="4" y1="12" x2="6" y2="12" />
+                        <line x1="10" y1="12" x2="20" y2="12" />
+                        <circle cx="17" cy="18" r="2" />
+                        <line x1="4" y1="18" x2="15" y2="18" />
+                        <line x1="19" y1="18" x2="20" y2="18" />
+                      </svg>
+                </span>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div id="chatList" class="flex-1 bg-blue-50 opacity-80 px-10 flex flex-col space-y-4 overflow-scroll">
+
+            <!-- <div class="self-end space-y-2">
+                <p class="text-gray-400 text-sm font-medium text-right">Yo mero</p>
+                <p class="p-4 bg-blue-600 rounded-3xl text-white text-sm font-light max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quia maxime culpa cum minima corporis, odio voluptas quaerat facere iure ratione libero a sunt odit. Eveniet rerum odit reprehenderit dolore?</p>
+                <p class="text-gray-400 text-sm font-medium text-right">20:00</p>
+            </div>
+
+            <div class=" space-y-2">
+                <p class="text-gray-400 text-sm font-medium text-left">Juan Perez</p>
+                <p class="p-4 bg-white rounded-3xl text-gray-800 text-sm font-light max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quia maxime culpa cum minima corporis, odio voluptas quaerat facere iure ratione libero a sunt odit. Eveniet rerum odit reprehenderit dolore?</p>
+                <p class="text-gray-400 text-sm font-medium text-left">20:03</p>
+            </div>
+
+            <div class="self-end space-y-2">
+                <p class="text-gray-400 text-sm font-medium text-right">Yo mero</p>
+                <p class="p-4 bg-blue-600 rounded-3xl text-white text-sm font-light max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quia maxime culpa cum minima corporis, odio voluptas quaerat facere iure ratione libero a sunt odit. Eveniet rerum odit reprehenderit dolore?</p>
+                <p class="text-gray-400 text-sm font-medium text-right">20:00</p>
+            </div>
+
+            <div class=" space-y-2">
+                <p class="text-gray-400 text-sm font-medium text-left">Juan Perez</p>
+                <p class="p-4 bg-white rounded-3xl text-gray-800 text-sm font-light max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quia maxime culpa cum minima corporis, odio voluptas quaerat facere iure ratione libero a sunt odit. Eveniet rerum odit reprehenderit dolore?</p>
+                <p class="text-gray-400 text-sm font-medium text-left">20:03</p>
+            </div>
+
+            <div class="self-end space-y-2">
+                <p class="text-gray-400 text-sm font-medium text-right">Yo mero</p>
+                <p class="p-4 bg-blue-600 rounded-3xl text-white text-sm font-light max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quia maxime culpa cum minima corporis, odio voluptas quaerat facere iure ratione libero a sunt odit. Eveniet rerum odit reprehenderit dolore?</p>
+                <p class="text-gray-400 text-sm font-medium text-right">20:00</p>
+            </div>
+
+            <div class=" space-y-2">
+                <p class="text-gray-400 text-sm font-medium text-left">Juan Perez</p>
+                <p class="p-4 bg-white rounded-3xl text-gray-800 text-sm font-light max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quia maxime culpa cum minima corporis, odio voluptas quaerat facere iure ratione libero a sunt odit. Eveniet rerum odit reprehenderit dolore?</p>
+                <p class="text-gray-400 text-sm font-medium text-left">20:03</p>
+            </div> -->
+            
+        </div>
+        
+        <!-- text box -->
+        <div class="flex py-6 px-14 space-x-4 bg-blue-50 bg-opacity-40">
+            <div class="w-full">
+                <input id="box" class="px-4 rounded-2xl h-12 w-full border-2" placeholder="Escribe algo aqui...." type="text">
+            </div>
+            <button id="sender" class="p-2 bg-blue-600 rounded-2xl hover:bg-blue-400 duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-white stroke-current h-8 w-8"  viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="18" y1="11" x2="12" y2="5" />
+                    <line x1="6" y1="11" x2="12" y2="5" />
+                </svg>
+            </button>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "tailwind-vanillajs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "Uriel Escorcia",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.2",
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4",
+    "vite": "^2.3.8",
+    "vite-plugin-vue2": "^1.8.2"
+  },
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
+}
